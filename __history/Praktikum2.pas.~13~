@@ -1,0 +1,48 @@
+unit Praktikum2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Imaging.jpeg, Vcl.ExtCtrls,
+  Vcl.StdCtrls, Vcl.ComCtrls;
+
+type
+  TForm2 = class(TForm)
+    Label2: TLabel;
+    Image1: TImage;
+    Label1: TLabel;
+    Label3: TLabel;
+    enpm: TEdit;
+    ename: TEdit;
+    Edit3: TEdit;
+    Button1: TButton;
+    Label4: TLabel;
+    cbjk: TComboBox;
+    Label5: TLabel;
+    dtp: TDateTimePicker;
+    Button2: TButton;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm2.Button1Click(Sender: TObject);
+begin
+enpm.clear;
+ename.clear;
+edit3.clear;
+cbjk.text := ' ';
+dtp.DateTime:= now;
+end;
+
+end.

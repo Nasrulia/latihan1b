@@ -1,0 +1,41 @@
+unit Praktikum1;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Imaging.jpeg;
+
+type
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    p: TPanel;
+    Edit1: TEdit;
+    Button1: TButton;
+    Image1: TImage;
+    procedure Button1Click(Sender: TObject);
+    procedure Edit1Change(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+p.Caption:= 'Halo selamat datang ' + edit1.Text;
+end;
+
+procedure TForm1.Edit1Change(Sender: TObject);
+begin
+p.Caption:= 'Halo selamat datang ' + edit1.Text;
+end;
+
+end.
